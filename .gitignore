@@ -1,0 +1,5 @@
+/node_modules/
+
+/dashboard/settings.json
+/handler/settings.json
+config.json
