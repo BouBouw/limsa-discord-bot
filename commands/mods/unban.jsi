@@ -7,22 +7,11 @@ module.exports = {
     options: [
         {
             name: 'memberID',
-            description: 'Membre a débannir',
-            type: ApplicationCommandOptionType.Number,
-            required: true,
+            description: "Identifiant a débannir.",
+            type: ApplicationCommandOptionType.String,
+            required: true
         },
     ],
 execute: async (client, interaction, args, con) => {
-    if(!interaction.member.permissions.has(PermissionsBitField.Flags.BanMembers)) return interaction.followUp({ content: `\`[⛔]\` ${interaction.member} vous n'avez pas la permission d'utiliser cette commande.` })
-
-    const targetID = interaction.options.getNumber('memberID');
-
-    interaction.guild.members.unban(targetID).then(async () => {
-        interaction.followUp({ content: `\`[✅]\` ${interaction.member} l'utilisateur ${client.members.cache.get(target)} (\`${target}\`) vient d'être débanni.` })
-    })
-    .catch((err) => {
-        interaction.followUp({ content: `\`[❌]\` ${interaction.member} l'utilisateur ${client.members.cache.get(target)} (\`${target}\`) n'est pas banni ou introuvable.` })
-    })
-    
     }
 }

@@ -47,6 +47,11 @@ execute: async (client, interaction, args, con) => {
                         value: "various"
                     },
                     {
+                        label: "Rencontre",
+                        emoji: "💕",
+                        value: "meeting"
+                    },
+                    {
                         label: "Jeux",
                         emoji: "🎮",
                         value: "games"
@@ -65,7 +70,7 @@ execute: async (client, interaction, args, con) => {
                     }
                 ],
                 footer: {
-                    text: "0/8"
+                    text: "0/9"
                 }
             }],
             components: [ row ]
@@ -99,7 +104,7 @@ execute: async (client, interaction, args, con) => {
                                     }
                                 ],
                                 footer: {
-                                    text: "1/8"
+                                    text: "1/9"
                                 }
                             }],
                         })
@@ -121,7 +126,7 @@ execute: async (client, interaction, args, con) => {
                                     }
                                 ],
                                 footer: {
-                                    text: "2/8"
+                                    text: "2/9"
                                 }
                             }],
                         })
@@ -139,11 +144,11 @@ execute: async (client, interaction, args, con) => {
                                 fields: [
                                     {
                                         name: "`[📌]` Commandes :",
-                                        value: "> `x`"
+                                        value: "> `lock`, `unlock`, `massive-role`"
                                     }
                                 ],
                                 footer: {
-                                    text: "3/8"
+                                    text: "3/9"
                                 }
                             }],
                         })
@@ -165,7 +170,7 @@ execute: async (client, interaction, args, con) => {
                                     }
                                 ],
                                 footer: {
-                                    text: "4/8"
+                                    text: "4/9"
                                 }
                             }],
                         })
@@ -187,7 +192,7 @@ execute: async (client, interaction, args, con) => {
                                     }
                                 ],
                                 footer: {
-                                    text: "5/8"
+                                    text: "5/9"
                                 }
                             }],
                         })
@@ -209,7 +214,7 @@ execute: async (client, interaction, args, con) => {
                                     }
                                 ],
                                 footer: {
-                                    text: "6/8"
+                                    text: "6/9"
                                 }
                             }],
                         })
@@ -231,7 +236,29 @@ execute: async (client, interaction, args, con) => {
                                     }
                                 ],
                                 footer: {
-                                    text: "7/8"
+                                    text: "7/9"
+                                }
+                            }],
+                        })
+
+                        await Menus();
+                        break;
+                    }
+
+                    case 'meeting': {
+                        msg.edit({
+                            embeds: [{
+                                color: Colors.Purple,
+                                title: "Page d'aide",
+                                description: `Développer par <@853261887520505866>`,
+                                fields: [
+                                    {
+                                        name: "`[💕]` Commandes :",
+                                        value: "> `profile`, `meet`"
+                                    }
+                                ],
+                                footer: {
+                                    text: "8/9"
                                 }
                             }],
                         })
@@ -253,7 +280,7 @@ execute: async (client, interaction, args, con) => {
                                     }
                                 ],
                                 footer: {
-                                    text: "8/8"
+                                    text: "9/9"
                                 }
                             }],
                         })
